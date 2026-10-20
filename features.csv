@@ -1,0 +1,81 @@
+feature,area,priority,original,clone,notes
+Account sign up and login,accounts,must,yes,no,S02. Guest play without account is an open question
+Public profile with avatar and username,accounts,must,yes,no,S20
+Quick play from pre-selected time control,play,must,yes,no,"F01, 3 actions from any page. Number to beat"
+Time-control picker with presets,play,must,yes,no,"X | Y format, increment in seconds"
+Custom time control,play,should,yes,no,Can wait long for a match; document the warning
+Pool matchmaking by time control and rating,play,must,yes,no,Hardest social problem; seed with bots when pool is thin
+Live game board with drag and click moves,play,must,yes,no,S07
+Server-authoritative clocks with increment,play,must,yes,no,Hard part #1
+Resign / draw offer / abort,play,must,yes,no,Abort rules to verify
+Game result detection (mate/stalemate/timeout/resign/abandon),play,must,yes,no,Rules engine; use an open-source chess library
+Premoves,play,should,yes,no,Documented setting
+Auto-queen toggle,play,should,yes,no,Documented setting
+Legal-move dots toggle,play,should,yes,no,Documented setting
+Captured pieces and material count,play,should,yes,no,Documented
+Draw arrows and highlights on board,play,could,yes,no,Documented
+Focus mode,play,could,yes,no,Documented
+Move timestamps,play,could,yes,no,Documented
+Board size and piece animation settings,play,could,yes,no,Documented. Use your own piece art
+Voice moves,play,could,yes,no,Documented
+Smart board support,play,could,yes,no,Partner-gated; see skip rows
+Unrated games,play,should,yes,no,Documented
+Choose color,play,should,yes,no,Documented
+Odds games with rating-gap balancing,play,could,yes,no,Documented
+Play from custom position,play,could,yes,no,Documented
+Rematch after game,play,should,yes,no,Inferred from game-over modal; to verify
+Rating per time class (bullet/blitz/rapid/daily),ratings,must,yes,no,Formula unverified in sources; pick Glicko-2 as a design choice
+Rating change shown after game,ratings,must,yes,no,S08
+Daily (correspondence) games with per-move time,play,should,yes,no,S09. Time is per move not per game
+Play vs computer with many bot levels,bots,should,yes,no,100+ bots in original; start with a few strengths
+Bot personas,bots,could,yes,no,Original has named personas
+Challenge a friend,social,should,yes,no,F04
+Friends list,social,should,yes,no,S29
+Direct messages,social,could,yes,no,S29
+Game chat,social,should,yes,no,Mute and block needed with it
+Report and block,safety,must,yes,no,S32. Reports routed to abuse or fair-play queues
+Fair-play detection (statistical),safety,should,yes,no,Hard part #3. MVP = report + manual review
+Automatic rating refund after cheater closure,safety,could,yes,no,Up to 100 games in original
+Account closure for cheating,safety,should,yes,no,Original issues no warnings for cheating
+Game Review after each game,review,must,yes,no,S12. The core loop's payoff and the paywall
+Move classification (brilliant to blunder),review,must,yes,no,Design your own icons
+Accuracy score,review,should,yes,no,Method in help; compute your own
+Estimated game rating in review,review,could,yes,no,Added in app release notes
+Evaluation graph,review,should,yes,no,
+Skills and suggested course in review,review,could,yes,no,Depends on lesson content
+Analysis board with engine lines,review,should,yes,no,S13
+Cloud analysis (server engine),review,could,yes,no,Costly compute; quota-gate it
+Game Explorer (opening stats),review,could,yes,no,S14
+Tablebase view,review,could,yes,no,Documented
+Saved analysis and game collections,review,could,yes,no,Documented
+PGN export,review,must,yes,no,Documented
+Comments and variations on games,review,could,yes,no,Documented
+Game archive and history,review,must,yes,no,S22
+Puzzles (standard),puzzles,should,yes,no,"S16. 500k+ in original; source your own set, check license"
+Puzzle Rush,puzzles,could,yes,no,Free daily caps in original
+Puzzle Battle,puzzles,could,yes,no,
+Themed puzzle practice,puzzles,could,yes,no,
+Lessons and courses,learn,could,yes,no,Content is not codeable
+Free vs paid tiers (Free/Gold/Platinum/Diamond),billing,should,yes,no,"S31. Friends & Family shared plan up to 6, documented"
+Paywall on review and analysis depth,billing,should,yes,no,"The business model, not a feature to skip"
+Clubs (create/join/roles),community,could,yes,no,S23-S24
+Club chat and forums,community,could,yes,no,
+Tournaments: Swiss,tournaments,could,yes,no,Pairing algorithm needed
+Tournaments: Arena,tournaments,could,yes,no,Needs ≥5 participants in original
+Multi-Club Arena,tournaments,could,yes,no,
+Club matches and leagues,tournaments,could,yes,no,
+Variants (Chess960; others),variants,could,yes,no,Chess960 is cheap to add; 4-player and bughouse are big
+Stats / insights,stats,could,yes,no,Diamond-gated in original
+Settings (board/pieces/sounds/notifications),settings,should,yes,no,S30
+Mobile apps,platform,could,yes,no,Web first
+Public read-only API,platform,could,yes,no,Original exposes public data only
+Chess TV / broadcasts,content,skip,yes,no,Editorial and licensed content
+News and articles,content,skip,yes,no,Editorial content
+Titled-player bios and coverage,content,skip,yes,no,Editorial content
+Original board palettes and piece designs,assets,skip,yes,no,Their IP. Make your own
+Original sound effects and move icons,assets,skip,yes,no,Their IP. Make your own
+Network effects (player pool and rating population),network,skip,yes,no,Not buildable
+Puzzle database and game archive of the original,data,skip,yes,no,Owned data
+Proctored high-stakes events and esports partnerships,partnerships,skip,yes,no,Partner deals
+Connected smart-board integrations,hardware,skip,yes,no,Partner-gated in original
+Trained fair-play models,safety,skip,yes,no,Proprietary

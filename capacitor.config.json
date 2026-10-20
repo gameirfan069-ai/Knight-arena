@@ -1,0 +1,6 @@
+{
+  "appId": "com.knightarena.chess",
+  "appName": "KnightArena Chess",
+  "webDir": "dist",
+  "server": { "androidScheme": "https" }
+}
